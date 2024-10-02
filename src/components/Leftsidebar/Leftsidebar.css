@@ -1,0 +1,193 @@
+.ls {
+    background: #001030;
+    color: white;
+    height: 75vh;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+}
+
+.ls-top {
+    padding: 15px;
+}
+
+.ls-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ls-nav .logo {
+    max-width: 120px;
+}
+
+.ls-nav .menu img {
+    max-height: 20px;
+    opacity: 0.6;
+    cursor: pointer;
+}
+
+.ls-search {
+    background-color: #002670;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 10px;
+    margin-top: 15px;
+    border-radius: 8px;
+}
+
+.ls-search input {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: white;
+    font-size: 11px;
+    flex: 1;
+}
+
+.ls-list {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    height: calc(75vh - 80px);
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.friends {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 12px;
+    cursor: pointer;
+    font-size: 13px;
+    transition: background-color 0.3s;
+}
+
+.friends img {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+}
+
+.friends div {
+    display: flex;
+    flex-direction: column;
+}
+
+.friends span {
+    color: #9f9f9f;
+    font-size: 11px;
+}
+
+.friends:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.friends:hover span { 
+    color: white;
+}
+
+.ls-nav .menu {
+    position: relative;
+    padding: 10px 0px;
+}
+
+.menu .sub-menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 130px;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: white;
+    color: black;
+    display: none;
+}
+
+.sub-menu hr {
+    border: none;
+    height: 1px;
+    background: #a4a4a4;
+    margin: 8px 0px;
+}
+
+.sub-menu p {
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.menu:hover .sub-menu {
+    display: block;
+}
+
+.no-user-found {
+    padding: 10px;
+    text-align: center;
+    color: #9f9f9f; /* Adjust color as needed */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .ls {
+        height: 85vh; /* Adjust height for tablets */
+    }
+
+    .ls-nav .logo {
+        max-width: 100px; /* Smaller logo for tablets */
+    }
+
+    .ls-nav .menu img {
+        max-height: 18px; /* Smaller menu icon */
+    }
+
+    .ls-search {
+        padding: 6px 8px; /* Adjust search padding */
+    }
+
+    .ls-search input {
+        font-size: 12px; /* Larger input font */
+    }
+
+    .friends img {
+        width: 30px; /* Smaller avatar for tablets */
+        height: 30px; /* Smaller avatar for tablets */
+    }
+
+    .last-message {
+        font-size: 12px; /* Adjust last message text size */
+    }
+}
+
+@media (max-width: 480px) {
+    .ls {
+        height: 90vh; /* Full height for mobile */
+        padding: 5px; /* Add padding for mobile */
+    }
+
+    .ls-search {
+        padding: 4px 6px; /* Reduce search padding for mobile */
+    }
+
+    .ls-search input {
+        font-size: 14px; /* Larger input font */
+    }
+
+    .friends {
+        padding: 5px; /* Reduce padding in friend list */
+    }
+
+    .friends img {
+        width: 28px; /* Even smaller avatar for mobile */
+        height: 28px; /* Even smaller avatar for mobile */
+    }
+
+    .friends span {
+        font-size: 10px; /* Adjust text size for mobile */
+    }
+
+    .no-user-found {
+        font-size: 12px; /* Smaller font size for no user found */
+    }
+}

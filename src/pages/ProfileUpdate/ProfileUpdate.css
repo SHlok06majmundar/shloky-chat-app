@@ -1,0 +1,151 @@
+.profile {
+    min-height: 100vh;
+    background: url('/background.png') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px; /* Padding to ensure no content touches the edges */
+}
+
+.profile-container {
+    background: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%; /* Ensure it takes full width */
+    max-width: 700px; /* Limit max width for larger screens */
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    margin: 0 auto; /* Center horizontally */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%; /* Full width for form */
+}
+
+h3 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center; /* Center the title */
+}
+
+.avatar-label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.avatar-icon {
+    width: 40px;
+    height: 40px;
+}
+
+.avatar-label span {
+    font-size: 14px;
+    color: #555;
+}
+
+.input-field,
+.textarea-field {
+    width: 100%; /* Full width input fields */
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    outline: none;
+    font-size: 14px;
+    transition: border-color 0.3s ease;
+}
+
+.input-field:focus,
+.textarea-field:focus {
+    border-color: #077eff;
+}
+
+.textarea-field {
+    resize: none; /* Prevent resizing */
+    height: 100px;
+}
+
+.submit-button {
+    padding: 12px;
+    background-color: #077eff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+    background-color: #005ecb; /* Darken button on hover */
+}
+
+.profile-pic {
+    max-width: 160px; /* Set max width for profile picture */
+    border-radius: 50%;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .profile-container {
+        padding: 30px; /* Reduce padding */
+    }
+
+    h3 {
+        font-size: 22px; /* Adjust heading size */
+    }
+
+    .avatar-icon {
+        width: 35px; /* Adjust avatar icon size */
+        height: 35px;
+    }
+
+    .input-field,
+    .textarea-field {
+        padding: 10px; /* Adjust padding */
+        font-size: 15px; /* Increase font size */
+    }
+
+    .submit-button {
+        font-size: 14px; /* Adjust button size */
+    }
+
+    .profile-pic {
+        max-width: 140px; /* Adjust profile picture size */
+    }
+}
+
+@media (max-width: 480px) {
+    .profile-container {
+        padding: 20px; /* Further reduce padding for very small screens */
+        width: 95%; /* Allow for full width on small screens */
+    }
+
+    h3 {
+        font-size: 20px; /* Smaller font size for headings */
+    }
+
+    .input-field,
+    .textarea-field {
+        padding: 8px; /* Further adjust input padding */
+        font-size: 14px; /* Smaller font size */
+    }
+
+    .submit-button {
+        padding: 10px; /* Adjust button padding */
+        font-size: 12px; /* Smaller button font size */
+    }
+
+    .profile-pic {
+        max-width: 120px; /* Adjust profile picture size */
+    }
+}

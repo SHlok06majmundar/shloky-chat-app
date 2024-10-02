@@ -1,0 +1,177 @@
+.rs {
+  width: 300px;
+  max-height: 100vh;
+  overflow-y: auto;
+  background-color: #f8f9fa;
+  border-left: 1px solid #e0e0e0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.rs-profile {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+.rs-profile-image img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-right: 15px;
+  object-fit: cover;
+}
+
+.rs-profile-info {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.rs-profile-info h3 {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  margin: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.rs-profile-info .dot {
+  width: 10px;
+  height: 10px;
+  margin-left: 8px;
+}
+
+.rs-profile-info p {
+  margin: 5px 0 0;
+  font-size: 14px;
+  color: #6c757d;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.rs-media {
+  margin-top: 20px;
+}
+
+.rs-media p {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.rs-media-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5px;
+  overflow: hidden;
+}
+
+.rs-media-grid img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+  max-height: 75px;
+}
+
+.rs-button {
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  align-self: flex-start;
+  transition: background-color 0.3s;
+}
+
+.rs-button:hover {
+  background-color: #0056b3;
+}
+
+.rs .rs-button {
+  margin-top: auto;
+  margin-bottom: 10px;
+  align-self: center;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .rs {
+    width: 100%;
+    padding: 15px;
+  }
+
+  .rs-profile-image img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .rs-profile-info h3 {
+    font-size: 16px;
+  }
+
+  .rs-profile-info p {
+    font-size: 12px;
+  }
+
+  .rs-media p {
+    font-size: 14px;
+  }
+
+  .rs-button {
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+
+  .rs-media-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .rs-media-grid img {
+    max-height: 60px;
+  }
+}
+
+@media (max-width: 480px) {
+  .rs {
+    padding: 10px;
+  }
+
+  .rs-profile-image img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .rs-profile-info h3 {
+    font-size: 14px;
+  }
+
+  .rs-profile-info p {
+    font-size: 10px;
+  }
+
+  .rs-media p {
+    font-size: 12px;
+  }
+
+  .rs-button {
+    padding: 6px 10px;
+    font-size: 12px;
+  }
+
+  .rs-media-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .rs-media-grid img {
+    max-height: 50px;
+  }
+}

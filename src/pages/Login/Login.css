@@ -1,0 +1,134 @@
+.login {
+    min-height: 100vh;
+    background: url(/public/background.png) no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.login .logo {
+    width: max(10vw, 120px);
+    height: auto;
+    max-width: 180px;
+    margin-right: 40px; /* Increased gap between logo and form */
+}
+
+.login-form {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    max-width: 350px;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.login-form h2 {
+    font-weight: 500;
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.form-input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline-color: blue;
+    width: 100%;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+.login-form button {
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login-form button:hover {
+    background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+    .login {
+        flex-direction: column;
+        padding: 20px;
+        align-items: center; /* Center items in column layout */
+    }
+
+    .login .logo {
+        margin-bottom: 20px;
+        margin-right: 0;
+        width: 80%; /* Adjust logo size on smaller screens */
+    }
+
+    .login-form {
+        width: 90%;
+        max-width: 300px; /* Set max width for smaller screens */
+        margin-left: 0;
+    }
+
+    .login-form h2 {
+        font-size: 1.3rem; /* Adjust heading size */
+    }
+
+    .form-input, .login-form button {
+        font-size: 0.9rem; /* Slightly smaller font size for inputs and buttons */
+    }
+
+    .login-term {
+        font-size: 11px; /* Adjust font size for terms */
+    }
+
+    .login-toggle, .forgot-password {
+        font-size: 12px; /* Adjust font size for toggle and forgot password text */
+    }
+}
+
+.login-term {
+    display: flex;
+    gap: 5px;
+    font-size: 12px;
+    color: #808080;
+}
+
+.login-forgot {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.login-toggle {
+    font-size: 13px;
+    color: #5c5c5c;
+}
+
+.login-toggle span {
+    font-weight: 500;
+    color: blue;
+    cursor: pointer;
+}
+
+.forgot-password {
+    font-size: 13px;
+    color: #5c5c5c;
+    cursor: pointer;
+}
+
+.forgot-password span {
+    color: blue;
+    font-weight: 500;
+}

@@ -1,0 +1,149 @@
+.chat-box {
+  height: 75vh;
+  position: relative;
+  background-color: #f1f5ff;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.chat-header {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.chat-user {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.user-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.chat-user p {
+  font-weight: 600;
+  font-size: 18px;
+  color: #333;
+}
+
+.status-container {
+  display: flex;
+  align-items: center;
+}
+
+.green-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
+.green-dot.online {
+  background-color: green;
+}
+
+.green-dot.offline {
+  background-color: red;
+}
+
+.chat-history {
+  flex: 1;
+  overflow-y: auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background-color: #f1f5ff;
+}
+
+.message {
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
+}
+
+.message-avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.s-msg {
+  justify-content: flex-end;
+}
+
+.r-msg {
+  justify-content: flex-start;
+}
+
+.msg {
+  max-width: 60%;
+  background-color: #ffffff;
+  padding: 12px 18px;
+  border-radius: 15px;
+  font-size: 16px;
+  color: #444;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.time-info {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  color: #888;
+}
+
+.chat-input {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 15px;
+  background: #fff;
+  border-top: 1px solid #e0e0e0;
+}
+
+.chat-input input[type="text"] {
+  flex: 1;
+  border: none;
+  background-color: #f1f1f1;
+  border-radius: 25px;
+  padding: 10px 20px;
+  font-size: 16px;
+}
+
+.chat-input button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.chat-placeholder {
+  padding: 20px;
+  text-align: center;
+  font-size: 16px;
+  color: #888;
+}
+
+@media (max-width: 768px) {
+  .chat-box {
+    height: 60vh;
+  }
+
+  .chat-input {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .chat-input input[type="text"] {
+    width: 100%;
+  }
+}
