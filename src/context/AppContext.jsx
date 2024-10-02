@@ -1,5 +1,5 @@
 import React, { createContext, useState, useEffect } from 'react';
-import { doc, getDoc, collection, query, where, getDocs, updateDoc, setDoc } from 'firebase/firestore';
+import { doc, getDoc, collection, query, where, getDocs, updateDoc } from 'firebase/firestore';
 import { db, auth } from '../config/firebase';
 import { onAuthStateChanged } from 'firebase/auth';
 
@@ -40,7 +40,7 @@ export const AppContextProvider = ({ children }) => {
       const userRef = doc(db, 'users', userId);
       await updateDoc(userRef, {
         isOnline,
-        lastSeen: isOnline ? null : new Date() // Store the current time when offline
+        lastSeen: isOnline ? null : new Date(), // Store the current time when offline
       });
     } catch (error) {
       console.error('Error updating user status:', error);
@@ -78,8 +78,9 @@ export const AppContextProvider = ({ children }) => {
         return chatData;
       }));
 
-      setChatData(chats.filter(chat => chat.userData));
-      console.log('Fetched chats:', chats);
+      const filteredChats = chats.filter(chat => chat.userData.length > 0); // Ensure userData is valid
+      setChatData(filteredChats);
+      console.log('Fetched chats:', filteredChats);
     } catch (error) {
       console.error('Error fetching chats:', error);
     }
@@ -150,7 +151,7 @@ export const AppContextProvider = ({ children }) => {
     } else {
       setChatData([]);
     }
-  }, [userData]);
+  }, [userData]); // Removed userData.id from dependencies to prevent unnecessary calls
 
   // Fetch all users once when the component mounts
   useEffect(() => {

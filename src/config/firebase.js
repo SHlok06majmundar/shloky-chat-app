@@ -4,17 +4,17 @@ import { getFirestore, setDoc, doc } from "firebase/firestore";
 
 // Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyB5WLKDz3TTi4Mitlna8ivqRpAHxzMWPPw",
-  authDomain: "chat-app-c6012.firebaseapp.com",
-  projectId: "chat-app-c6012",
-  storageBucket: "chat-app-c6012.appspot.com",
-  messagingSenderId: "378105730193",
-  appId: "1:378105730193:web:a8eb640169b5b5f2529b30",
-  measurementId: "G-T23765Q7C7"
+  apiKey: "AIzaSyBaAlHyQV_IMVrE3aQfBcjEW7fdbHCWT2M",
+  authDomain: "shlok-chat-app-a8727.firebaseapp.com",
+  projectId: "shlok-chat-app-a8727",
+  storageBucket: "shlok-chat-app-a8727.appspot.com",
+  messagingSenderId: "887314576740",
+  appId: "1:887314576740:web:2ad6b0b154ebdabc8c7671",
+  measurementId: "G-KMHZZ18011"
 };
-
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
+
 const auth = getAuth(app);
 const db = getFirestore(app);
 
